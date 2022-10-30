@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Cohort Stats",
+    "version": "0.1.0",
+    "description": "Track the number of students in the Cohort from week to week",
+    "permissions": [
+        "storage"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "scripts/content.js"
+            ],
+            "matches": [
+                "https://progress.appacademy.io/me/students*"
+            ]
+        }
+    ]
+}
