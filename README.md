@@ -14,7 +14,8 @@ always be accurate.
 
 ##What it looks like when no changes occur:
 
-<img width="527" alt="nochanges" src="https://user-images.githubusercontent.com/104668677/198858688-78b5a0bd-fba4-436e-968d-de926944b0f8.png">
+<img width="560" alt="nochanges" src="https://user-images.githubusercontent.com/104668677/198859051-cac2089c-2632-461a-8735-6b5e1b162b73.png">
+
 
 #Installation
 
