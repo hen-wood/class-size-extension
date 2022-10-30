@@ -13,7 +13,17 @@ function setWeek(week) {
 
 setWeek('current week')
 let currentWeek = window.localStorage.getItem('current week')
-
+// currentWeek = JSON.parse(currentWeek)
+// currentWeek.shift()
+// currentWeek.shift()
+// currentWeek.shift()
+// currentWeek.shift()
+// currentWeek.pop()
+// currentWeek[0] = 'Example Student 1'
+// currentWeek[4] = 'Example Student 2'
+// currentWeek[7] = 'Example Student 3'
+// window.localStorage.setItem(`current week`, JSON.stringify(currentWeek))
+// currentWeek = window.localStorage.getItem('current week')
 
 if (!window.localStorage.getItem('last week')) {
     setWeek('last week')
@@ -41,7 +51,7 @@ if (classSizeDiff > 0) {
 } else if (classSizeDiff < 0) {
     classSizeMessage = `Total Size: ${thisWeekList.size} (${classSizeDiff} students)`
 } else {
-    classSizeMessage = 'No change in total class size this week'
+    classSizeMessage = `Total Size: ${thisWeekList.size}`
 }
 
 let lostStudents = []
