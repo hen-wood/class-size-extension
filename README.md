@@ -5,7 +5,8 @@ students in the cohort. Any changes in class size (students lost/gained) will al
 It uses your own local storage on chrome and will only check for updates when the page is visited,
 so the first time the page is visited it will say there are no changes. The next time changes occur on the page, it should update. It has three sets to compare. One
 for "last week" and one for "this week" to determine the individual student changes and overall change in class size, then one for "current week" to check
-if actual changes have occurred on the page.
+if actual changes have occurred on the page. The page must be visited at least once a week for the week-over-week changes to be accurate. Total Size will
+always be accurate.
 
 ##What it looks like when changes occur:
 
