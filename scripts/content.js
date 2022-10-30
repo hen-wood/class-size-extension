@@ -33,8 +33,6 @@ if (thisWeek !== currentWeek) {
 
 const lastWeekList = new Set(JSON.parse(lastWeek))
 const thisWeekList = new Set(JSON.parse(thisWeek))
-console.log(lastWeekList)
-console.log(thisWeekList)
 
 let classSizeDiff = thisWeekList.size - lastWeekList.size
 let classSizeMessage
