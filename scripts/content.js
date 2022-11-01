@@ -11,19 +11,17 @@ function setWeek(week) {
     window.localStorage.setItem(`${week}`, JSON.stringify(weekArr))
 }
 
-setWeek('current week')
+let noUpdateTimeRange = new Set([8, 9, 10, 11, 12, 13, 14, 15, 16, 17])
+let today = new Date(Date.now()).getDay()
+let thisHour = new Date(Date.now()).getHours()
+
+if (today === 1 && noUpdateTimeRange.has(thisHour)) {
+    alert('Today is Monday! Can\'t update until 6pm PST')
+} else {
+    setWeek('current week')
+}
+
 let currentWeek = window.localStorage.getItem('current week')
-// currentWeek = JSON.parse(currentWeek)
-// currentWeek.shift()
-// currentWeek.shift()
-// currentWeek.shift()
-// currentWeek.shift()
-// currentWeek.pop()
-// currentWeek[0] = 'Example Student 1'
-// currentWeek[4] = 'Example Student 2'
-// currentWeek[7] = 'Example Student 3'
-// window.localStorage.setItem(`current week`, JSON.stringify(currentWeek))
-// currentWeek = window.localStorage.getItem('current week')
 
 if (!window.localStorage.getItem('last week')) {
     setWeek('last week')
