@@ -15,8 +15,8 @@ let noUpdateTimeRange = new Set([8, 9, 10, 11, 12, 13, 14, 15, 16, 17])
 let today = new Date(Date.now()).getDay()
 let thisHour = new Date(Date.now()).getHours()
 
-if (today === 1 && noUpdateTimeRange.has(thisHour)) {
-    alert('Today is Monday! Can\'t update until 6pm PST')
+if (today === 1 || (today === 2 && noUpdateTimeRange.has(thisHour))) {
+    alert('Can\'t update until 6pm PST on Tuesday')
 } else {
     setWeek('current week')
 }
