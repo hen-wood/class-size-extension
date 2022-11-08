@@ -1,5 +1,6 @@
 const students = document.querySelectorAll('.classmate-block')
-
+const pics = document.querySelectorAll("body > main > section > ul > li> img")
+pics.forEach(pic => pic.setAttribute('src', 'https://phantom-marca.unidadeditorial.es/bbb8eb8c549be38ee2d1eb5b19fef4e2/crop/0x0/977x651/resize/1320/f/jpg/assets/multimedia/imagenes/2022/10/31/16672238661731.png'))
 const title = document.querySelector('h1')
 function setWeek(week) {
     const weekArr = []
@@ -10,7 +11,6 @@ function setWeek(week) {
 
     window.localStorage.setItem(`${week}`, JSON.stringify(weekArr))
 }
-
 let noUpdateTimeRange = new Set([8, 9, 10, 11, 12, 13, 14, 15, 16, 17])
 let today = new Date(Date.now()).getDay()
 let thisHour = new Date(Date.now()).getHours()
@@ -20,7 +20,6 @@ if (today === 1 || (today === 2 && noUpdateTimeRange.has(thisHour))) {
 } else {
     setWeek('current week')
 }
-
 let currentWeek = window.localStorage.getItem('current week')
 
 if (!window.localStorage.getItem('last week')) {
@@ -82,7 +81,7 @@ title.insertAdjacentHTML('afterend', lostStudentsElement)
 
 let gainedStudentsElement
 if (gainedStudents.length) {
-    gainedStudentsElement = `<h2>Students Gained (+${gainedLength}): ${gainedStudents}</h2>`
+    gainedStudentsElement = `<h2 style="color: green;">Students Gained (+${gainedLength}): ${gainedStudents}</h2>`
 } else {
     gainedStudentsElement = `<h2>Gained no students from cohort ahead of us</h2>`
 }
